@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>multidimensionale-array-sorteren.php</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); }
+.s1 { color: rgb(0,0,255); font-weight: bold; }
+.s2 { color: rgb(0,0,0); }
+.s3 { color: rgb(0,0,128); font-weight: bold; }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+.s5 { color: rgb(0,0,128); font-weight: bold; }
+.s6 { color: rgb(0,0,0); }
+.s7 { color: rgb(128,128,128); font-style: italic; }
+.s8 { color: rgb(102,0,0); }
+.s9 { color: rgb(0,0,255); }
+.s10 { color: rgb(0,128,0); font-weight: bold; }
+.s11 { color: rgb(0,0,0); }
+.s12 { color: rgb(0,0,0); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+multidimensionale-array-sorteren.php</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">&lt;!DOCTYPE </span><span class="s1">html</span><span class="s0">&gt;</span><span class="s2"> 
+</span><span class="s0">&lt;</span><span class="s3">head</span><span class="s0">&gt;</span><span class="s2"> 
+    </span><span class="s0">&lt;</span><span class="s3">meta </span><span class="s1">http-equiv=</span><span class="s4">&quot;content-type&quot; </span><span class="s1">content=</span><span class="s4">&quot;text/html;  charset=iso-8859-1&quot; </span><span class="s0">/&gt;</span><span class="s2"> 
+    </span><span class="s0">&lt;</span><span class="s3">title</span><span class="s0">&gt;</span><span class="s2">Multidimensionale Arrays Sorteren</span><span class="s0">&lt;/</span><span class="s3">title</span><span class="s0">&gt;</span><span class="s2"> 
+</span><span class="s0">&lt;/</span><span class="s3">head</span><span class="s0">&gt;</span><span class="s2"> 
+</span><span class="s0">&lt;</span><span class="s3">body</span><span class="s0">&gt;</span><span class="s2"> 
+</span><span class="s5">&lt;?php </span><span class="s7"># Script multidimensionale-array-sorteren.php</span><span class="s6"> 
+</span><span class="s7">/* 
+ * ==== Ik wil je verblijden met mijn unieke DIEREN &amp; LEEFTIJD SCRIPT! SORTEER DIEREN EN HUN LEEFTIJD! VRIJ NUTTELOOS, MAAR WEL LEUK OM MEE TE EXPERIMENTEREN! === 
+ * JE krijgt toestemming om code te jatten, maar meldt mij dat wel even! 
+ * === 
+ * Ik zou graag verbeteringen willen zien op het script, dus je mag mij in mijn GITHUB commenten en anders kun je 
+ * terecht op PHPWIJS.nl !!! 
+ * ---------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ * In dit geweldige script kun je dieren sorteren! En hun leeftijd sorteren. Je kan de meest nutteloze zaken in een array 
+ *  zetten en die sorteren, wanneer je een nachtje niks te doen hebt! Ik wens je veel succes met het sorteren van dingen. 
+ * Wat dacht je ervan om de volgende zaken eens te sorteren: 
+ * - Het aantal gemeenten waarin het meeste bier wordt gedronken 
+ * - De objecten die vrouwen het meeste in de kledingzaken kopen 
+ * - 10 geboden voor een goede liefde 
+ * - De 10 beste geboden voor goede liefde sorteren!!! 
+ * En uiteraard nog veel meer mogelijk! Experimenteer een beetje 
+ * met deze code en je zult zien dat het helemaal niet moeilijk is! 
+ * 
+ * ============================== LET OP UPDATE: VERSIE 26-1-2017: Script is nog niet helemaal vrij van fouten! Dus onder voorbehoud ====================================== 
+ * ============================== Je kunt aan de slag met het oplossen van problemen, Hier is er een fout op regel 42 van het script. Probeer dit op te lossen! ====================== 
+ * ============================== Meteen een goede oefening om te werken met het opzetten en sorteren van multidimensionale arrays! ======================================================== 
+ * ==== Zie ook de manier van comments! Jat mijn werkwijze, dat is goed! ============= 
+ */</span><span class="s6"> 
+</span><span class="s7">// een multidimensionale array aanmaken</span><span class="s6"> 
+</span><span class="s8">$dieren </span><span class="s6">= </span><span class="s5">array</span><span class="s6">( 
+    </span><span class="s9">123 </span><span class="s6">=&gt; </span><span class="s5">array</span><span class="s6">(</span><span class="s10">'naam' </span><span class="s6">=&gt; </span><span class="s10">'Ezel'</span><span class="s6">, 
+    </span><span class="s10">'leeftijd' </span><span class="s6">=&gt; </span><span class="s9">25</span><span class="s6">), 
+    </span><span class="s9">37 </span><span class="s6">=&gt; </span><span class="s5">array</span><span class="s6">(</span><span class="s10">'naam' </span><span class="s6">=&gt; </span><span class="s10">'Paard'</span><span class="s6">, 
+        </span><span class="s10">'leeftijd' </span><span class="s6">=&gt; </span><span class="s9">44</span><span class="s6">), 
+    </span><span class="s9">48 </span><span class="s6">=&gt; </span><span class="s5">array</span><span class="s6">(</span><span class="s10">'naam' </span><span class="s6">=&gt; </span><span class="s10">'Varken'</span><span class="s6">), 
+        </span><span class="s10">'leeftijd' </span><span class="s6">=&gt; </span><span class="s9">34</span><span class="s6">); 
+ 
+</span><span class="s7">//sorteren diernamen</span><span class="s6"> 
+ 
+    </span><span class="s5">function </span><span class="s11">namen_sorteren </span><span class="s6">(</span><span class="s8">$a</span><span class="s6">, </span><span class="s8">$b</span><span class="s6">) {  
+    </span><span class="s5">return </span><span class="s12">strcasecmp</span><span class="s6">(</span><span class="s8">$a</span><span class="s6">[</span><span class="s10">'naam'</span><span class="s6">], </span><span class="s8">$b</span><span class="s6">[</span><span class="s10">'naam'</span><span class="s6">]); 
+    }  
+     
+    </span><span class="s5">function </span><span class="s11">leeftijden_sorteren</span><span class="s6">(</span><span class="s8">$a</span><span class="s6">, </span><span class="s8">$b</span><span class="s6">) 
+    { 
+    </span><span class="s5">return </span><span class="s6">(</span><span class="s8">$a</span><span class="s6">[</span><span class="s10">'leeftijd'</span><span class="s6">] &lt; </span><span class="s8">$b</span><span class="s6">[</span><span class="s10">'leeftijd'</span><span class="s6">]); 
+    } 
+ 
+    </span><span class="s7">// De Gehele Array Weergeven</span><span class="s6"> 
+</span><span class="s5">echo </span><span class="s10">'&lt;h3&gt; Oorspronkelijke array &lt;/h3&gt; &lt;pre&gt;'</span><span class="s6">.</span><span class="s12">print_r</span><span class="s6">(</span><span class="s8">$dieren</span><span class="s6">, </span><span class="s9">1</span><span class="s6">) . </span><span class="s10">'&lt;/pre&gt;'</span><span class="s6">; 
+ 
+ 
+    </span><span class="s7">// De array gesorteerd op naam</span><span class="s6"> 
+</span><span class="s12">uasort</span><span class="s6">(</span><span class="s8">$dieren</span><span class="s6">, </span><span class="s10">'namen_sorteren'</span><span class="s6">); 
+ 
+</span><span class="s7">//array weergeven gesorteerd op naam</span><span class="s6"> 
+    </span><span class="s5">echo </span><span class="s10">'&lt;h3&gt; Array gesorteerd op naam' </span><span class="s6">. </span><span class="s10">'&lt;/h3&gt;&lt;pre&gt;' </span><span class="s6">.</span><span class="s12">print_r</span><span class="s6">(</span><span class="s8">$dieren</span><span class="s6">, </span><span class="s9">1</span><span class="s6">) . </span><span class="s10">'&lt;/pre&gt;'</span><span class="s6">; 
+ 
+    </span><span class="s7">// sorteer de dieren op leeftijd</span><span class="s6"> 
+    </span><span class="s12">uasort</span><span class="s6">(</span><span class="s8">$dieren</span><span class="s6">, </span><span class="s10">'leeftijden_sorteren'</span><span class="s6">); 
+    </span><span class="s7">// en array tonen</span><span class="s6"> 
+</span><span class="s5">echo </span><span class="s10">'&lt;h4&gt; Array gesorteerd op leeftijd'</span><span class="s6">. </span><span class="s10">'&lt;/h3&gt;&lt;pre&gt;'</span><span class="s6">.</span><span class="s12">print_r</span><span class="s6">(</span><span class="s8">$dieren</span><span class="s6">, </span><span class="s9">1</span><span class="s6">) . </span><span class="s10">'&lt;/pre&gt;'</span><span class="s6">;</span></pre>
+</body>
+</html>
